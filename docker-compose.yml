@@ -4,6 +4,7 @@ services:
   jenkins:
     build:
       context: . # 같은 폴더내에 있는 Dockerfile 실행
+    restart: unless-stopped
     container_name: jenkins #컨테이너이름
     ports:
       - "8080:8080" # jenkins 접속 port
