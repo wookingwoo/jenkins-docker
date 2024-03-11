@@ -5,6 +5,7 @@ services:
     build:
       context: . # 같은 폴더내에 있는 Dockerfile 실행
     restart: unless-stopped
+    hostname: jenkins
     container_name: jenkins #컨테이너이름
     ports:
       - "8080:8080" # jenkins 접속 port
@@ -14,3 +15,4 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock # 로컬의 docker와, jenkins 내에서 사용할 docker 엔진을 연결
       - ./jenkins_home:/var/jenkins_home # jenkins 설치 폴더
+      - /usr/bin/docker:/usr/bin/docker
