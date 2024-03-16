@@ -16,5 +16,7 @@ RUN curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID"
 
 RUN apt-get update && apt-get -y install docker-ce-cli
 
+# TODO: docker-compose 설치
+
 RUN groupadd -f docker
 RUN usermod -aG docker jenkins
