@@ -14,7 +14,7 @@ https://stackoverflow.com/questions/73110198/jenkins-error-buildind-docker-lib-x
 
 - run jenkins container on detached mode:
 ```
-docker run -u 0 -p 8081:8080 -p 50001:50000 -d -v /var/run/docker.sock:/var/run/docker.sock -v /busition_jenkinsdata:/var/jenkins_home jenkins/jenkins:lts
+docker run -u 0 -p 8081:8080 -p 50001:50000 -d -v /var/run/docker.sock:/var/run/docker.sock -v ./jenkins_data/jenkins_home:/var/jenkins_home jenkins/jenkins:lts
 ```
 
 - Enter the jenkins container as root user:
